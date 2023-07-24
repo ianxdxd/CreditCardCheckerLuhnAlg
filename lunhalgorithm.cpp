@@ -5,14 +5,14 @@
 
 using namespace std;
 
-bool checkNumericString(const string& s){
+bool checkNumericString(const string& creditCardNum){
 
-    int nDigits = s.length();
+    int nDigits = creditCardNum.length();
     int nSum = 0, isSecond = false;
 
     for(int i = nDigits - 1; i >= 0; --i){
 
-        int d  = s[i] - '0';
+        int d  = creditCardNum[i] - '0';
         if(isSecond == true)d = d *2;
 
         // add 2 digits to handle
